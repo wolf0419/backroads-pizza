@@ -1,0 +1,6 @@
+/* Deliberately no tiled grain: it produced visible bands at high zoom. */
+body:before{display:none}
+.hero-media{filter:brightness(1.15)}
+/* Keep the photo bright while protecting the embedded Backroads lockup. */
+.hero:after{background:radial-gradient(ellipse 58% 52% at 30% 30%,rgba(0,0,0,.45) 0%,rgba(0,0,0,.29) 47%,rgba(0,0,0,0) 78%)}
+@media(max-width:720px){.hero-media{background-position:43% center}.hero:after{background:radial-gradient(ellipse 92% 46% at 47% 25%,rgba(0,0,0,.48) 0%,rgba(0,0,0,.25) 54%,rgba(0,0,0,0) 85%)}}
