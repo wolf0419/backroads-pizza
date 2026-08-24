@@ -1,0 +1,2 @@
+/* Keep the public Pages site intentionally menu-only. */
+.header{justify-content:center}.lightbox{align-items:center;justify-content:center}.lightbox.open{display:flex}.full-menu{width:auto;height:calc(100vh - 64px);aspect-ratio:3/4;flex:0 0 auto}.full-menu img{width:200%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:left top}@media(max-width:760px){.full-menu{height:auto;width:94vw;aspect-ratio:3/4}.full-menu img{height:100%}}
