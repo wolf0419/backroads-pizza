@@ -1,0 +1,6 @@
+const cfg={name:'Backroads Pizza & Bourbon Bar',location:'NW 67th Ave & Hwy 12, Highfill, Arkansas',hours:'Wednesday–Monday · Closed Tuesday · Every NFL Sunday'};
+document.querySelectorAll('[data-location]').forEach(el=>el.textContent=cfg.location);document.querySelectorAll('[data-hours]').forEach(el=>el.textContent=cfg.hours);
+const nav=document.querySelector('.site-nav');if(nav){addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>70),{passive:true});document.querySelector('.nav-toggle')?.addEventListener('click',()=>document.querySelector('.nav-links').classList.toggle('open'))}
+document.querySelectorAll('.accordion button').forEach(button=>button.addEventListener('click',()=>{const card=button.parentElement;card.classList.toggle('open');button.querySelector('span').textContent=card.classList.contains('open')?'−':'+'}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const hero=document.querySelector('.hero-media');if(hero&&matchMedia('(prefers-reduced-motion:no-preference)').matches)addEventListener('scroll',()=>hero.style.transform=`translateY(${scrollY*.32}px)`,{passive:true});
